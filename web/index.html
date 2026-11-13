@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geeta Gaud Residence — First Floor Walkthrough</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #111; font-family: system-ui, sans-serif; }
+  canvas { display: block; }
+  #overlay { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+             background: rgba(10, 12, 16, .72); color: #f2efe8; text-align: center; cursor: pointer; }
+  #overlay h1 { font-weight: 600; margin: 0 0 6px; font-size: 26px; }
+  #overlay p { margin: 4px; opacity: .85; }
+  #overlay kbd { background: #2b2f36; border-radius: 4px; padding: 1px 7px; font-family: inherit; }
+  #room { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,.45);
+          padding: 6px 14px; border-radius: 18px; font-size: 15px; pointer-events: none; }
+  #room:empty { display: none; }
+  #help { position: fixed; bottom: 12px; left: 12px; color: #ddd; font-size: 12px; background: rgba(0,0,0,.4);
+          padding: 6px 10px; border-radius: 6px; pointer-events: none; }
+  #cross { position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%;
+           background: rgba(255,255,255,.7); pointer-events: none; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "../node_modules/three/build/three.module.js",
+               "three/addons/": "../node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="overlay">
+  <h1>First Floor — Smt. Geeta Gaud, Shalimar Greens</h1>
+  <p id="status">Loading model…</p>
+  <p><kbd>W A S D</kbd> walk &nbsp; <kbd>Mouse</kbd> look &nbsp; <kbd>Shift</kbd> run &nbsp; <kbd>T</kbd> top view &nbsp; <kbd>Esc</kbd> pause</p>
+</div>
+<div id="room"></div>
+<div id="cross"></div>
+<div id="help"><b id="fps"></b> · WASD walk · Shift run · T top view · L lights · O shadows (AO) · Esc pause</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
